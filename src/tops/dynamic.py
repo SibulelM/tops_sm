@@ -301,7 +301,7 @@ class PowerSystemModel:
         self.y_bus_dyn = self.build_y_bus_dyn()
         self.y_bus_red_full = self.kron_reduction(self.y_bus_dyn, self.bus_idx_red)
         self.y_bus_red = sp.csr_matrix(self.y_bus_red_full)
-        self.y_bus_red_mod = sp.csr_matrix(self.y_bus_red_full)*0
+        self.y_bus_red_mod = sp.csr_matrix(self.y_bus_red_full)*0  #Creates a new matrix y_mod of same size as y_full and then make all its elements zero
 
         # for mdl in self.dyn_mdls:
         #     mdl.sys_par['red_to_full'] = self.red_to_full

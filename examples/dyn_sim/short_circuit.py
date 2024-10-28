@@ -16,7 +16,7 @@ if __name__ == '__main__':
     ps.init_dyn_sim()
     print(max(abs(ps.state_derivatives(0, ps.x_0, ps.v_0))))
 
-    t_end = 10
+    t_end = 20
     x_0 = ps.x_0.copy()
 
     # Solver
@@ -34,7 +34,7 @@ if __name__ == '__main__':
         sys.stdout.write("\r%d%%" % (t/(t_end)*100))
 
         # Short circuit
-        if t >= 1 and t <= 1.05:
+        if t >= 5 and t <= 5.5:
             ps.y_bus_red_mod[(sc_bus_idx,) * 2] = 1e6
         else:
             ps.y_bus_red_mod[(sc_bus_idx,) * 2] = 0

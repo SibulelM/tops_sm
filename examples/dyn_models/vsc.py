@@ -4,15 +4,15 @@ import matplotlib.pyplot as plt
 import time
 import tops.dynamic as dps
 import tops.solvers as dps_sol
-import importlib
-importlib.reload(dps)
-import importlib
+#import importlib
+#importlib.reload(dps)
+#import importlib
 
 if __name__ == '__main__':
 
     # Load model
     import tops.ps_models.k2a as model_data
-    importlib.reload(model_data)
+    #importlib.reload(model_data)
     model = model_data.load()
 
     model['vsc'] = {'VSC': [

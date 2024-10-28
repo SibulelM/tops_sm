@@ -40,7 +40,7 @@ if __name__ == '__main__':
         # Short circuit
         if t > 1 and event_flag:
             event_flag = False
-            ps.lines['Line'].event(ps, ps.lines['Line'].par['name'][0], 'disconnect')
+            ps.lines['Line'].event(ps, ps.lines['Line'].par['name'][2], 'disconnect')
 
         # Simulate next step
         result = sol.step()
