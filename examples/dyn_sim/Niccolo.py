@@ -60,7 +60,7 @@ while t < t_end:
 
   # Implement the short circuit in the bus where the generator is connected
   if t > t_event and  event_true:
-    s_const_old[event_load_bus_idx] += 0*power_unbanlance/ps.s_n
+    s_const_old[event_load_bus_idx] += power_unbanlance/ps.s_n
     event_true = False
 
   # Simulate next step
@@ -96,7 +96,8 @@ print(' ')
 print('S_increment_P',np.real(s_const_old[event_load_bus_idx])*ps.s_n)
 print('S_increment_Q',np.imag(s_const_old[event_load_bus_idx])*ps.s_n)
 print(' ')
-#print('I4',I4)
+print('YOld', y_new)
+print('YNew', y_old)
 print(' ')
 print('P_4',np.real(s_4)*ps.s_n)
 print('Q_4',np.imag(s_4)*ps.s_n)
