@@ -60,7 +60,7 @@ class VSC(DAEModel):
         I_q_0 = self.par['Q_setp']/(abs(V_0)*np.sqrt(3))
 
         self.pi_p.initialize(
-            x_0, v_0, self.lag_p.initialize(x_0, v_0, I_d_0)    #unclear why lag_p output is needed for the pi?
+            x_0, v_0, self.lag_p.initialize(x_0, v_0, I_d_0)    #unclear why lag_p and q output are needed for the pi?
         )
 
         self.pi_q.initialize(

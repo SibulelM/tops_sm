@@ -45,7 +45,7 @@ if __name__ == '__main__':
         sys.stdout.write("\r%d%%" % (t/(t_end)*100))
 
         if t > 1:
-            ps.vsc['VSC'].set_input('P_setp', -105)
+            ps.vsc['VSC'].set_input('P_setp', -100)
 
         # Simulate next step
         result = sol.step()
