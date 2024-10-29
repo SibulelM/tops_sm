@@ -4,8 +4,10 @@ import matplotlib.pyplot as plt
 import numpy as np
 import time
 import sys
-import dynpssimpy.dynamic as dps
-import dynpssimpy.solvers as dps_sol
+#import dynpssimpy.dynamic as dps
+import tops.dynamic as dps
+#import dynpssimpy.solvers as dps_sol
+import tops.solvers as dps_sol
 import importlib
 importlib.reload(dps)
 
@@ -13,7 +15,7 @@ importlib.reload(dps)
 if __name__ == '__main__':
 
     # Load model
-    import dynpssimpy.ps_models.k2a_base_case_with_AVRs_and_GOVs as model_data
+    import tops.ps_models.k2a_base_case_with_AVRs_and_GOVs as model_data
     model = model_data.load()
 
     # Power system model
